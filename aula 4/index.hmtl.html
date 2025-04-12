@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Aula 4 - Desenvolvimento Web 1</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    section {
+      padding-top: 60px;
+      margin-top: -60px; 
+    }
+  </style>
+</head>
+<body class="vh-100 d-flex flex-column">
+
+
+  <header class="d-flex flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom px-4 bg-light">
+    <div>
+      <h1 class="mb-0">👨‍💻 Aula 4 - Desenvolvimento Web 1</h1>
+      <small class="text-muted">Aprendendo a estruturar e estilizar páginas com HTML e Bootstrap</small>
+    </div>
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#inicio" class="nav-link active">Página Inicial</a></li>
+        <li class="nav-item"><a href="#precos" class="nav-link">Preços</a></li>
+        <li class="nav-item"><a href="#faq" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="px-5 text-center">
+
+    <section id="inicio">
+      <h2 class="lead">Conteúdo principal da página: Receita de bolo.</h2>
+      <p>Para fazer um delicioso bolo de chocolate, você vai precisar de: 
+        <strong>farinha</strong>, <strong>açúcar</strong>, <strong>cacau em pó</strong>, 
+        <strong>ovos</strong> e <strong>leite</strong>.<br>
+        Primeiro, misture os ingredientes secos. Em seguida, adicione os ovos e o leite, e bata até obter uma massa homogênea. 
+        Depois, despeje a massa em uma forma untada e asse em forno pré-aquecido por cerca de 30 minutos.</p>
+    </section>
+
+   
+    <section id="precos">
+      <h2 class="mt-5">💰 Preços</h2>
+      <p>Confira nossos planos:</p>
+      <ul class="list-unstyled">
+        <li><strong>Plano Básico:</strong> R$ 29,90/mês - Acesso a conteúdo limitado.</li>
+        <li><strong>Plano Intermediário:</strong> R$ 59,90/mês - Acesso completo + certificado.</li>
+        <li><strong>Plano Premium:</strong> R$ 99,90/mês - Acesso total + mentorias ao vivo.</li>
+      </ul>
+    </section>
+
+
+    <section id="faq">
+      <h2 class="mt-5">❓ Perguntas Frequentes (FAQs)</h2>
+      <p><strong>1. Posso cancelar a qualquer momento?</strong><br>
+        Sim, você pode cancelar seu plano quando quiser.</p>
+      <p><strong>2. Terei certificado?</strong><br>
+        Sim, todos os planos intermediário e premium oferecem certificados ao final.</p>
+      <p><strong>3. Quais formas de pagamento?</strong><br>
+        Aceitamos cartões, boleto e Pix.</p>
+    </section>
+
+
+    <section id="sobre">
+      <h2 class="mt-5">📚 Sobre</h2>
+      <p>Este site foi criado como parte do exercício da Aula 4 de Desenvolvimento Web 1. Ele ensina conceitos básicos de estruturação com HTML e aplicação de estilos com Bootstrap.</p>
+      <p>O objetivo é aprender a dividir a página em partes claras: cabeçalho, conteúdo principal e rodapé, além de usar links de navegação.</p>
+    </section>
+  </main>
+
+  <footer class="mt-auto d-flex justify-content-center py-3 border-top">
+    <p>Rodapé: Página criada pelo aluno <strong>“Lucas A. Lusni”</strong>.</p>
+  </footer>
+
+</body>
+</html>
