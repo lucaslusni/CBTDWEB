@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Instituto Human</title>
+  <link rel="stylesheet" href="css/style_index.css" />
+  <link rel="stylesheet" href="css/style_contato.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><strong style="color:white;">INSTITUTO <span style="font-weight:900;">HUMAN</span></strong></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="contato.html" class="doe-agora">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de Contato -->
+  <section class="contato-section">
+    <h2>Fale Conosco</h2>
+    <form action="contato.php" method="post">
+      <input type="text" name="nome" placeholder="Seu nome completo" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="tel" name="telefone" placeholder="Telefone ou WhatsApp" />
+      <textarea name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="contato-icons">
+      <a href="https://wa.me/SEUNUMERO" target="_blank" title="WhatsApp">
+        <img src="imagens/WhatsappIcon.png" alt="WhatsApp" />
+      </a>
+      <a href="mailto:contato@institutohuman.org" title="E-mail">
+        <img src="imagens/EmailIcon.png" alt="E-mail" />
+      </a>
+      <a href="https://www.instagram.com/institutohuman" target="_blank" title="Instagram">
+        <img src="imagens/InstragemIcon.png" alt="Instagram" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-logo">INSTITUTO <strong>HUMAN</strong></div>
+    <div class="footer-contato">
+      <p>contato@institutohuman.org</p>
+      <div class="social-icons">
+        <a href="#"><img src="imagens/InstragemIcon.png" alt="Instagram"></a>
+        <a href="#"><img src="imagens/YoutubeIcon.png" alt="YouTube"></a>
+        <a href="#"><img src="imagens/FacebookIcon.png" alt="Facebook"></a>
+        <a href="#"><img src="imagens/WhatsappIcon.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+    <p class="copyright">Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.</p>
+  </footer>
+
+</body>
+</html>

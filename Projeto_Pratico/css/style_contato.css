@@ -1,0 +1,189 @@
+/* =============================== */
+/* RESET E CONFIGURAÇÕES GERAIS */
+/* =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* =============================== */
+/* CABEÇALHO PADRÃO INSTITUTO HUMAN */
+/* =============================== */
+header {
+  background-color: #FF4500;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #CCFF00;
+}
+
+.navbar .doe-agora {
+  background-color: #CCFF00;
+  color: black;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.navbar .doe-agora:hover {
+  background-color: #b0e700;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding-top: 80px;
+}
+
+/* =============================== */
+/* FORMULÁRIO DE CONTATO MODERNO  */
+/* =============================== */
+.contato-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  max-width: 700px;
+  margin: 4rem auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contato-section h2 {
+  font-size: 2rem;
+  color: #FF4500;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contato-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.contato-section input,
+.contato-section textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contato-section input:focus,
+.contato-section textarea:focus {
+  border-color: #FF4500;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.2);
+}
+
+.contato-section button {
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contato-section button:hover {
+  background-color: #e03e00;
+}
+
+/* ÍCONES SOCIAIS MODERNOS */
+.contato-icons {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contato-icons a img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(50%);
+}
+
+.contato-icons a:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+/* Footer */
+footer {
+  background-color: #ff5c00;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-contato p {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a img {
+  width: 24px;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}

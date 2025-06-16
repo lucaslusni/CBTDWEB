@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voluntariado - Instituto Human</title>
+  <link rel="stylesheet" href="css/style_index.css" />
+  <link rel="stylesheet" href="css/style_voluntariado.css" />
+
+  <script>
+    function abrirModal() {
+      document.getElementById('modalVoluntario').style.display = 'block';
+    }
+    function fecharModal() {
+      document.getElementById('modalVoluntario').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><strong style="color:white;">INSTITUTO <span style="font-weight:900;">HUMAN</span></strong></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="voluntariado.html">Voluntariado</a></li>
+        <li><a href="contato.html" class="doe-agora">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <img src="imagens/imgParticipantes.png" alt="Banner Voluntariado">
+  </section>
+
+  <!-- Descrição -->
+  <section class="descricao">
+    <h2>Transforme o mundo com a gente</h2>
+    <p>Participar como voluntário no Instituto Human é ter a chance de contribuir com projetos sociais e culturais que promovem dignidade, inclusão e empatia. Junte-se a centenas de pessoas que já estão construindo novas histórias!</p>
+    <ul>
+      <li>Atuação em ações presenciais</li>
+      <li>Mobilização digital</li>
+      <li>Contribuições com habilidades e talentos</li>
+    </ul>
+    <a class="btn-inscricao" onclick="abrirModal()">Quero me juntar ao voluntariado</a>
+  </section>
+
+  <!-- Modal do Formulário -->
+  <div id="modalVoluntario" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="fecharModal()">&times;</span>
+      <h3>Formulário de Voluntariado</h3>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem adicional:</label>
+        <textarea id="mensagem" name="mensagem"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Ações -->
+  <section class="acoes">
+    <div class="acao">
+      <img src="imagens/imgAcao1.png" alt="Foto Ação 1">
+      <div>
+        <h3>Ação Humanitária</h3>
+        <p>Participe de eventos e ações sociais em comunidades vulneráveis.</p>
+        <a href="#" class="btn-whatsapp">Entrar em contato</a>
+      </div>
+    </div>
+
+    <div class="acao">
+      <img src="imagens/imgAcao2.png" alt="Foto Ação 2">
+      <div>
+        <h3>Doe seu Talento</h3>
+        <p>Use suas habilidades para colaborar com nossos projetos de impacto.</p>
+        <a href="#" class="btn-talento">Inscreva-se</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda -->
+  <section class="agenda">
+    <div class="agenda-texto">
+      <h3>Confira nosso calendário de atividades</h3>
+      <a href="#" class="btn-agenda">Ver Agenda</a>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section class="galeria">
+    <img src="imagens/img1.png" alt="Galeria 1">
+    <img src="imagens/img3.png" alt="Galeria 2">
+    <img src="imagens/img4.png" alt="Galeria 3">
+    <img src="imagens/img5.png" alt="Galeria 4">
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-logo">INSTITUTO <strong>HUMAN</strong></div>
+    <div class="footer-contato">
+      <p>contato@institutohuman.org</p>
+      <div class="social-icons">
+        <a href="#"><img src="imagens/InstragemIcon.png" alt="Instagram"></a>
+        <a href="#"><img src="imagens/YoutubeIcon.png" alt="YouTube"></a>
+        <a href="#"><img src="imagens/FacebookIcon.png" alt="Facebook"></a>
+        <a href="#"><img src="imagens/WhatsappIcon.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+    <p class="copyright">Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.</p>
+  </footer>
+</body>
+</html>
