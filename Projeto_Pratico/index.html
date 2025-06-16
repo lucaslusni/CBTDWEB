@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="css/style_index.css" />
 </head>
 <body>
-
-  <!-- Menu de Navegação Estilo Instituto Human -->
+  <!-- Menu de Navegação -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Menu principal">
       <div class="logo">
-        <a href="index.html"><strong style="color:white; font-size: 1.2rem;">INSTITUTO <span style="font-weight: 900;">HUMAN</span></strong></a>
+        <a href="index.html">
+          <strong style="color:white; font-size: 1.2rem;">INSTITUTO <span style="font-weight: 900;">HUMAN</span></strong>
+        </a>
       </div>
       <ul>
         <li><a href="#institucional">Sobre Nós</a></li>
@@ -24,105 +25,134 @@
     </nav>
   </header>
 
-  <!-- Seção Inicial com Grid de Imagens -->
-  <section id="inicio" class="inicio-grid">
-    <h1>Muito prazer, somos o <strong>Instituto Human</strong></h1>
-    <div class="grid-container">
-      <div class="grid-item img"><img src="imagens/img1.png" alt="Conectar Pessoas"></div>
-      <div class="grid-item text">Conectar<br><strong>PROPÓSITOS</strong></div>
-      <div class="grid-item img"><img src="imagens/img2.png" alt="Sentir Junto"></div>
-      <div class="grid-item text"><strong>Conectar<br>PESSOAS</strong></div>
-      <div class="grid-item img"><img src="imagens/img3.png" alt="Equipe reunida"></div>
-      <div class="grid-item text">Sentir<br><strong>JUNTO</strong></div>
-      <div class="grid-item img"><img src="imagens/img4.png" alt="Conectar Causas"></div>
-      <div class="grid-item text"><strong>Conectar<br>CAUSAS</strong></div>
-      <div class="grid-item img"><img src="imagens/img5.png" alt="Desde 2017"></div>
-    </div>
-    <p class="desde">Desde 2017</p>
-  </section>
+  <main>
+    <!-- Seção Inicial -->
+    <section id="inicio" class="inicio-grid">
+      <h1>Muito prazer, somos o <strong>Instituto Human</strong></h1>
+      <div class="grid-container" aria-label="Missão do Instituto">
+        <div class="grid-item img"><img src="imagens/img1.png" alt="Conectar Pessoas"></div>
+        <div class="grid-item text">Conectar<br><strong>PROPÓSITOS</strong></div>
+        <div class="grid-item img"><img src="imagens/img2.png" alt="Sentir Junto"></div>
+        <div class="grid-item text"><strong>Conectar<br>PESSOAS</strong></div>
+        <div class="grid-item img"><img src="imagens/img3.png" alt="Equipe reunida"></div>
+        <div class="grid-item text">Sentir<br><strong>JUNTO</strong></div>
+        <div class="grid-item img"><img src="imagens/img4.png" alt="Conectar Causas"></div>
+        <div class="grid-item text"><strong>Conectar<br>CAUSAS</strong></div>
+        <div class="grid-item img"><img src="imagens/img5.png" alt="Desde 2017"></div>
+      </div>
+      <p class="desde">Desde 2017</p>
+    </section>
 
-  <!-- Destaque Instituto Human -->
-  <section id="institucional" class="section destaque">
-    <div class="intro">
-      <h2>Instituto Human</h2>
-      <p>Somos um guarda-chuva social que une pessoas, empresas e comunidades para criar soluções transformadoras. 
-      <strong>Somos um movimento vivo, um espaço aberto para novas causas e projetos</strong> que compartilham nossos valores.</p>
+    <!-- Sobre o Instituto -->
+    <section id="institucional" class="section destaque" aria-labelledby="titulo-institucional">
+      <div class="intro">
+        <h2 id="titulo-institucional">Instituto Human</h2>
+        <p>Somos um guarda-chuva social que une pessoas, empresas e comunidades para criar soluções transformadoras. <strong>Somos um movimento vivo, um espaço aberto para novas causas e projetos</strong> que compartilham nossos valores.</p>
+        <p>Acreditamos que, juntos, podemos construir oportunidades e gerar mudanças estruturais, sempre pautados nos <strong><em>ODS</em></strong>, através dos projetos <em>Human Day</em>, <em>FestPraRua</em>, <em>Brilho das Manas</em>, <em>Manos</em> e <em>Human Sem Fronteiras</em>.</p>
+        <div class="botoes">
+          <a href="#institucional" class="btn-laranja">Conexões que</a>
+          <a href="#institucional" class="btn-laranja">Mudam</a>
+          <a href="#institucional" class="btn-laranja">Histórias</a>
+        </div>
+      </div>
 
-      <p>Acreditamos que, juntos, podemos construir oportunidades e gerar mudanças estruturais, sempre pautados nos <strong><em>ODS</em></strong>, 
-      através dos projetos <em>Human Day</em>, <em>FestPraRua</em>, <em>Brilho das Manas</em>, <em>Manos</em> e <em>Human Sem Fronteiras</em>.</p>
+      <div class="estatisticas">
+        <div class="card">
+          <h3>+12.000</h3>
+          <p>Pessoas<br>Impactadas</p>
+        </div>
+        <div class="card">
+          <h3>4</h3>
+          <p>Causas Sociais<br>Diferentes</p>
+        </div>
+        <div class="card">
+          <h3>+3.000</h3>
+          <p>Voluntários<br>Engajados</p>
+        </div>
+        <div class="card destaque-card">
+          <h3>8</h3>
+          <p>Anos de<br>Atuação</p>
+        </div>
+      </div>
+    </section>
 
-      <div class="botoes">
-        <a href="#institucional" class="btn-laranja">Conexões que</a>
-        <a href="#institucional" class="btn-laranja">Mudam</a>
-        <a href="#institucional" class="btn-laranja">Histórias</a>
+    <!-- Projetos -->
+    <section id="projetos" class="section projetos">
+      <h2>Conheça os nossos projetos sociais</h2>
+      <div class="projetos-container">
+        <div class="card-projeto">
+          <img src="imagens/Banner Human Sem Fronteiras.png" alt="Projeto Human Sem Fronteiras">
+          <h3>Human Sem Fronteiras</h3>
+          <p>Apoio a refugiados e imigrantes no Brasil.</p>
+          <a href="projetos.html" class="btn-projeto">Saiba mais</a>
+        </div>
+        <div class="card-projeto">
+          <img src="imagens/bannerFestPraRua.png" alt="Projeto FestPraRua">
+          <h3>FestPraRua</h3>
+          <p>Festival cultural que fortalece laços comunitários e promove inclusão.</p>
+          <a href="projetos.html" class="btn-projeto">Saiba mais</a>
+        </div>
+        <div class="card-projeto">
+          <img src="imagens/BannerManaseManos.png" alt="Projeto Brilho das Manas e Manos">
+          <h3>Brilho das Manas e Manos</h3>
+          <p>Inclusão de pessoas trans e travestis em situação de vulnerabilidade.</p>
+          <a href="projetos.html" class="btn-projeto">Saiba mais</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="estatisticas">
-      <div class="card">
-        <h3>+12.000</h3>
-        <p>Pessoas<br>Impactadas</p>
+    <!-- Voluntariado -->
+    <section id="voluntariado" class="voluntariado-section">
+      <div class="voluntariado-container">
+        <div class="voluntariado-imagem">
+          <img src="imagens/imgAcao1.png" alt="Voluntários Instituto Human">
+        </div>
+        <div class="voluntariado-texto">
+          <h2>Quero ser voluntário</h2>
+          <p>Ser voluntário no Instituto Human é uma forma de fazer parte de um movimento que transforma realidades.</p>
+          <p>Junte-se a centenas de pessoas criando conexões e novas histórias.</p>
+          <a href="voluntariado.html" class="btn-voluntario">Quero ser voluntário</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>4</h3>
-        <p>Causas Sociais<br>Diferentes</p>
-      </div>
-      <div class="card">
-        <h3>+3.000</h3>
-        <p>Voluntários<br>Engajados</p>
-      </div>
-      <div class="card destaque-card">
-        <h3>8</h3>
-        <p>Anos de<br>Atuação</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projetos -->
-  <section id="projetos" class="section projetos">
-    <h2>Conheça os nossos projetos sociais</h2>
-    <div class="projetos-container">
-            <div class="card-projeto">
-        <img src="imagens/Banner Human Sem Fronteiras.png" alt="Projeto Human Sem Fronteiras">
-        <h3>Human Sem Fronteiras</h3>
-        <p>Apoio a refugiados e imigrantes no Brasil.</p>
-        <a href="projetos.html" class="btn-projeto">Saiba mais</a>
+    <!-- Notícias -->
+    <section id="noticias" class="noticias-section">
+      <h2>Últimas Notícias</h2>
+      <div class="noticias-container">
+        <div class="card-noticia">
+          <img src="imagens/imgDoaçãodeRoupas.png" alt="Imagem da Notícia 1" />
+          <div class="noticia-conteudo">
+            <h2>Mutirão do Human Day atende 500 pessoas em São Paulo</h2>
+            <p>Ação contou com serviços de saúde, alimentação e acolhimento. Mais de 100 voluntários participaram da ação.</p>
+            <a href="#">Leia mais</a>
+          </div>
+        </div>
+        <div class="card-noticia">
+          <img src="imagens/imgVoluntarioFotógrafo.png" alt="Imagem da Notícia 2" />
+          <div class="noticia-conteudo">
+            <h2>FestPraRua reúne artistas de rua e promove inclusão cultural</h2>
+            <p>Evento gratuito aconteceu no centro de São Paulo com apresentações musicais e rodas de conversa.</p>
+            <a href="#">Leia mais</a>
+          </div>
+        </div>
+        <div class="card-noticia">
+          <img src="imagens/imgAcao2.png" alt="Imagem da Notícia 3" />
+          <div class="noticia-conteudo">
+            <h2>Instituto lança programa de capacitação para voluntários</h2>
+            <p>Curso online gratuito prepara cidadãos para ações sociais com foco em empatia e dignidade.</p>
+            <a href="#">Leia mais</a>
+          </div>
+        </div>
       </div>
-      <div class="card-projeto">
-        <img src="imagens/bannerFestPraRua.png" alt="Projeto FestPraRua">
-        <h3>FestPraRua</h3>
-        <p>Festival cultural que fortalece laços comunitários e promove inclusão.</p>
-        <a href="projetos.html" class="btn-projeto">Saiba mais</a>
-      </div>
-      <div class="card-projeto">
-        <img src="imagens/BannerManaseManos.png" alt="Projeto Brilho das Manas e Manos">
-        <h3>Brilho das Manas e Manos</h3>
-        <p>Inclusão de pessoas trans e travestis em situação de vulnerabilidade.</p>
-        <a href="projetos.html" class="btn-projeto">Saiba mais</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Voluntariado -->
-  <section id="voluntariado" class="voluntariado-section">
-    <div class="voluntariado-container">
-      <div class="voluntariado-imagem">
-        <img src="imagens/imgAcao1.png" alt="Voluntários Instituto Human">
-      </div>
-      <div class="voluntariado-texto">
-        <h2>Quero ser voluntário</h2>
-        <p>Ser voluntário no Instituto Human é uma forma de fazer parte de um movimento que transforma realidades.</p>
-        <p>Junte-se a centenas de pessoas criando conexões e novas histórias.</p>
-        <a href="voluntariado.html" class="btn-voluntario">Quero ser voluntário</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Rodapé -->
   <footer>
     <div class="footer-logo">INSTITUTO <strong>HUMAN</strong></div>
     <div class="footer-contato">
-      <p>contato@institutohuman.org</p>
+      <p><a href="mailto:contato@institutohuman.org">contato@institutohuman.org</a></p>
       <div class="social-icons">
         <a href="#"><img src="imagens/InstragemIcon.png" alt="Instagram"></a>
         <a href="#"><img src="imagens/YoutubeIcon.png" alt="YouTube"></a>

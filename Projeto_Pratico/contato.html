@@ -9,11 +9,13 @@
 </head>
 <body>
 
-  <!-- Cabeçalho padrão -->
+  <!-- Cabeçalho -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Menu principal">
       <div class="logo">
-        <a href="index.html"><strong style="color:white;">INSTITUTO <span style="font-weight:900;">HUMAN</span></strong></a>
+        <a href="index.html">
+          <strong style="color:white;">INSTITUTO <span style="font-weight:900;">HUMAN</span></strong>
+        </a>
       </div>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -25,42 +27,55 @@
   </header>
 
   <!-- Seção de Contato -->
-  <section class="contato-section">
-    <h2>Fale Conosco</h2>
-    <form action="contato.php" method="post">
-      <input type="text" name="nome" placeholder="Seu nome completo" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <input type="tel" name="telefone" placeholder="Telefone ou WhatsApp" />
-      <textarea name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <main>
+    <section class="contato-section" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato">Fale Conosco</h2>
+      
+      <form action="contato.php" method="post">
+        <label for="nome" class="visually-hidden">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
 
-    <div class="contato-icons">
-      <a href="https://wa.me/SEUNUMERO" target="_blank" title="WhatsApp">
-        <img src="imagens/WhatsappIcon.png" alt="WhatsApp" />
-      </a>
-      <a href="mailto:contato@institutohuman.org" title="E-mail">
-        <img src="imagens/EmailIcon.png" alt="E-mail" />
-      </a>
-      <a href="https://www.instagram.com/institutohuman" target="_blank" title="Instagram">
-        <img src="imagens/InstragemIcon.png" alt="Instagram" />
-      </a>
-    </div>
-  </section>
+        <label for="email" class="visually-hidden">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required />
+
+        <label for="telefone" class="visually-hidden">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="Telefone ou WhatsApp" />
+
+        <label for="mensagem" class="visually-hidden">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="contato-icons" aria-label="Canais de contato">
+        <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener" title="WhatsApp">
+          <img src="imagens/WhatsappIcon.png" alt="Ícone do WhatsApp" />
+        </a>
+        <a href="mailto:contato@institutohuman.org" title="E-mail">
+          <img src="imagens/EmailIcon.png" alt="Ícone de e-mail" />
+        </a>
+        <a href="https://www.instagram.com/institutohuman_org/" target="_blank" rel="noopener" title="Instagram">
+          <img src="imagens/InstragemIcon.png" alt="Ícone do Instagram" />
+        </a>
+      </div>
+    </section>
+  </main>
 
   <!-- Rodapé -->
   <footer>
     <div class="footer-logo">INSTITUTO <strong>HUMAN</strong></div>
     <div class="footer-contato">
-      <p>contato@institutohuman.org</p>
+      <p><a href="mailto:contato@institutohuman.org">contato@institutohuman.org</a></p>
       <div class="social-icons">
-        <a href="#"><img src="imagens/InstragemIcon.png" alt="Instagram"></a>
-        <a href="#"><img src="imagens/YoutubeIcon.png" alt="YouTube"></a>
-        <a href="#"><img src="imagens/FacebookIcon.png" alt="Facebook"></a>
-        <a href="#"><img src="imagens/WhatsappIcon.png" alt="WhatsApp"></a>
+        <a href="https://www.instagram.com/institutohuman_org/"><img src="imagens/InstragemIcon.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/@Institutohuman"><img src="imagens/YoutubeIcon.png" alt="YouTube"></a>
+        <a href="https://www.facebook.com/?locale=pt_BR"><img src="imagens/FacebookIcon.png" alt="Facebook"></a>
+        <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="imagens/WhatsappIcon.png" alt="WhatsApp"></a>
       </div>
     </div>
-    <p class="copyright">Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.</p>
+    <p class="copyright">
+      Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.
+    </p>
   </footer>
 
 </body>

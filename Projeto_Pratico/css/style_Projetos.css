@@ -200,3 +200,15 @@ footer {
     align-items: center;
   }
 }
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5c00; /* fundo laranja */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1200px; /* controla o tamanho do retângulo */
+  margin: 2rem auto; /* centraliza horizontalmente */
+}
+
+
