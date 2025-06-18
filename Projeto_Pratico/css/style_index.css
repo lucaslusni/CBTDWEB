@@ -1,4 +1,42 @@
-/* Reset e configurações gerais */
+/* ==================================================
+   ESTILO PRINCIPAL — RESPONSIVO E COMENTADO
+   --------------------------------------------------
+   Autor.......: <Seu Nome / Equipe>
+   Projeto.....: Site Institucional — Instituto Human
+   Descrição...: Folha de estilos global com boas práticas,
+                 variáveis CSS, responsividade e
+                 semântica de comentários.
+   Última revisão: 18/06/2025
+   ================================================== */
+
+/* -------------------------------------------------- */
+/* VARIÁVEIS GLOBAIS                                  */
+/* -------------------------------------------------- */
+:root {
+  /* Paleta de cores */
+  --color-primary: #FF4500;          /* Laranja principal */
+  --color-primary-dark: #e03e00;     /* Laranja escuro (hover) */
+  --color-accent: #CCFF00;           /* Amarelo‑limão / Destaque */
+  --color-background: #f5f5f5;       /* Cinza claro de fundo geral */
+  --color-light: #ffffff;            /* Branco */
+  --color-dark: #333333;             /* Texto padrão */
+  --color-footer: #ff5c00;           /* Laranja do rodapé */
+  --color-link: #004080;             /* Azul do botão formulário */
+  --color-link-hover: #0066cc;       /* Azul hover */
+
+  /* Sombras */
+  --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  /* Tipografia */
+  --font-base: Arial, sans-serif;
+  --line-height-base: 1.6;
+}
+
+/* -------------------------------------------------- */
+/* RESET E CONFIGURAÇÕES GERAIS                       */
+/* -------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -10,73 +48,61 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
-  padding-top: 80px;
+  font-family: var(--font-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-background);
+  color: var(--color-dark);
+  padding-top: 80px; /* espaço para header fixo */
 }
 
-/* Menu de navegação */
+/* -------------------------------------------------- */
+/* HEADER / MENU DE NAVEGAÇÃO                         */
+/* -------------------------------------------------- */
 header {
-  background-color: #FF4500;
+  background-color: var(--color-primary);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-small);
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: #FF4500;
+  color: white;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  list-style: none;
+  gap: 1.2rem;
 }
 
 .navbar a {
   color: white;
-  text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: #CCFF00;
-}
-
-.navbar .doe-agora {
-  background-color: #CCFF00;
+.navbar .btn-doe {
+  background: #CCFF00;
   color: black;
-  padding: 8px 18px;
+  padding: 0.4rem 0.9rem;
   border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 0.3s;
 }
 
-.navbar .doe-agora:hover {
-  background-color: #b0e700;
-}
 
-/* Seção Inicial */
+/* -------------------------------------------------- */
+/* SEÇÃO INICIAL (GRID)                               */
+/* -------------------------------------------------- */
 .inicio-grid {
   text-align: center;
   padding: 60px 20px;
-  background-color: #fff;
+  background-color: var(--color-light);
 }
 
 .inicio-grid h1 {
@@ -86,11 +112,10 @@ header {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  justify-items: center;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .grid-item {
@@ -104,10 +129,11 @@ header {
   height: 160px;
   text-align: center;
   font-weight: 500;
-  color: #333;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  color: var(--color-dark);
+  box-shadow: var(--shadow-card);
 }
 
+/* Itens de imagem */
 .grid-item.img {
   background-color: transparent;
   padding: 0;
@@ -116,11 +142,12 @@ header {
 
 .grid-item.img img {
   width: 100%;
-  border-radius: 10px;
-  height: auto;
+  height: 160px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
+/* Legenda "desde" */
 .inicio-grid .desde {
   text-align: right;
   margin-top: 15px;
@@ -129,15 +156,16 @@ header {
   color: #555;
 }
 
-/* Seções Gerais */
+/* -------------------------------------------------- */
+/* SEÇÕES GERAIS (REUTILIZÁVEL)                       */
+/* -------------------------------------------------- */
 .section {
   padding: 60px 20px;
   max-width: 1100px;
-  margin: auto;
-  background-color: #ffffff;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  background-color: var(--color-light);
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-card);
 }
 
 .section img {
@@ -147,14 +175,16 @@ header {
   border-radius: 8px;
 }
 
-/* Institucional */
+/* -------------------------------------------------- */
+/* BLOCO INSTITUCIONAL / ESTATÍSTICAS                 */
+/* -------------------------------------------------- */
 .destaque {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
   align-items: flex-start;
-  background-color: #fff;
+  background-color: var(--color-light);
 }
 
 .destaque .intro {
@@ -169,10 +199,11 @@ header {
 .destaque .intro p {
   margin-bottom: 15px;
   font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  line-height: var(--line-height-base);
+  color: var(--color-dark);
 }
 
+/* Botões genéricos laranja */
 .botoes {
   display: flex;
   gap: 10px;
@@ -181,19 +212,21 @@ header {
 }
 
 .btn-laranja {
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   padding: 10px 16px;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn-laranja:hover {
-  background-color: #e03e00;
+.btn-laranja:hover,
+.btn-laranja:focus {
+  background-color: var(--color-primary-dark);
 }
 
+/* Cartões de estatísticas */
 .estatisticas {
   flex: 1 1 45%;
   display: grid;
@@ -202,12 +235,12 @@ header {
 }
 
 .estatisticas .card {
-  border: 2px solid #FF4500;
+  border: 2px solid var(--color-primary);
   border-radius: 12px;
   padding: 25px 15px;
   text-align: center;
-  color: #333;
-  background-color: #fff;
+  background-color: var(--color-light);
+  color: var(--color-dark);
   transition: transform 0.3s ease;
 }
 
@@ -217,26 +250,29 @@ header {
 
 .estatisticas .card h3 {
   font-size: 1.8rem;
-  color: #FF4500;
+  color: var(--color-primary);
   margin-bottom: 10px;
 }
 
+/* Cartão em destaque (cor invertida) */
 .estatisticas .destaque-card {
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   border: none;
 }
 
 .estatisticas .destaque-card h3 {
-  color: white;
+  color: var(--color-light);
 }
 
-/* Projetos */
+/* -------------------------------------------------- */
+/* SEÇÃO PROJETOS                                     */
+/* -------------------------------------------------- */
 .projetos {
-  background-color: #FF4500;
+  background-color: var(--color-primary);
   padding: 60px 20px;
   border-radius: 12px;
-  color: white;
+  color: var(--color-light);
 }
 
 .projetos h2 {
@@ -252,12 +288,12 @@ header {
 }
 
 .card-projeto {
-  background-color: white;
-  color: #333;
+  background-color: var(--color-light);
+  color: var(--color-dark);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-medium);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -282,22 +318,25 @@ header {
 }
 
 .btn-projeto {
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   padding: 10px 16px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 20px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn-projeto:hover {
-  background-color: #e03e00;
+.btn-projeto:hover,
+.btn-projeto:focus {
+  background-color: var(--color-primary-dark);
 }
 
-/* Voluntariado */
+/* -------------------------------------------------- */
+/* VOLUNTARIADO                                       */
+/* -------------------------------------------------- */
 .voluntariado-section {
-  background-color: #ffffff;
+  background-color: var(--color-light);
   padding: 60px 20px;
 }
 
@@ -307,7 +346,7 @@ header {
   align-items: center;
   gap: 40px;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .voluntariado-imagem {
@@ -317,7 +356,7 @@ header {
 .voluntariado-imagem img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .voluntariado-texto {
@@ -327,31 +366,34 @@ header {
 .voluntariado-texto h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #FF4500;
+  color: var(--color-primary);
 }
 
 .voluntariado-texto p {
   font-size: 1rem;
   margin-bottom: 15px;
-  color: #333;
-  line-height: 1.6;
+  line-height: var(--line-height-base);
+  color: var(--color-dark);
 }
 
 .btn-voluntario {
-  background-color: #FF4500;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
   padding: 12px 24px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 30px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn-voluntario:hover {
-  background-color: #e03e00;
+.btn-voluntario:hover,
+.btn-voluntario:focus {
+  background-color: var(--color-primary-dark);
 }
 
-/* Formulário */
+/* -------------------------------------------------- */
+/* FORMULÁRIO                                         */
+/* -------------------------------------------------- */
 form {
   display: flex;
   flex-direction: column;
@@ -373,25 +415,27 @@ form textarea {
 }
 
 form button {
-  background-color: #004080;
-  color: white;
+  background-color: var(--color-link);
+  color: var(--color-light);
   padding: 12px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-form button:hover {
-  background-color: #0066cc;
+form button:hover,
+form button:focus {
+  background-color: var(--color-link-hover);
 }
 
-/* Rodapé */
-/* Footer */
+/* -------------------------------------------------- */
+/* RODAPÉ                                            */
+/* -------------------------------------------------- */
 footer {
-  background-color: #ff5c00;
-  color: #fff;
+  background-color: var(--color-footer);
+  color: var(--color-light);
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;
@@ -399,7 +443,7 @@ footer {
 
 .footer-logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -413,62 +457,23 @@ footer {
   vertical-align: middle;
 }
 
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    padding-left: 0;
-  }
-
-  .navbar .logo {
-    margin-bottom: 10px;
-  }
-
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-
-  .inicio-grid h1 {
-    font-size: 1.4rem;
-  }
-
-  .destaque {
-    flex-direction: column;
-  }
-
-  .voluntariado-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .voluntariado-texto {
-    padding: 0 10px;
-  }
-}
-/* Notícias */
+/* -------------------------------------------------- */
+/* NOTÍCIAS                                           */
+/* -------------------------------------------------- */
 .noticias-section {
-  background-color: #ffffff;
+  background-color: var(--color-light);
   padding: 60px 20px;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto 40px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 40px;
+  box-shadow: var(--shadow-card);
 }
 
 .noticias-section h2 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 2rem;
-  color: #FF4500;
+  color: var(--color-primary);
 }
 
 .noticias-container {
@@ -479,9 +484,9 @@ footer {
 }
 
 .card-noticia {
-  background-color: white;
+  background-color: var(--color-light);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-medium);
   width: 300px;
   overflow: hidden;
   display: flex;
@@ -501,22 +506,74 @@ footer {
 .noticia-conteudo h2 {
   font-size: 1.1rem;
   margin-bottom: 10px;
-  color: #FF4500;
+  color: var(--color-primary);
 }
 
 .noticia-conteudo p {
   font-size: 0.95rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--color-dark);
 }
 
 .noticia-conteudo a {
   text-decoration: none;
-  color: #FF4500;
-  font-weight: bold;
-  transition: color 0.3s;
+  color: var(--color-primary);
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-.noticia-conteudo a:hover {
-  color: #e03e00;
+.noticia-conteudo a:hover,
+.noticia-conteudo a:focus {
+  color: var(--color-primary-dark);
+}
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES — RESPONSIVIDADE                     */
+/* -------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Navegação empilhada */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  /* Grid inicial mais compacto */
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .inicio-grid h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Flex para colunas simples */
+  .destaque,
+  .voluntariado-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .voluntariado-texto {
+    padding: 0 10px;
+  }
+}
+/* Classe para destacar o link ativo do menu */
+.active-link {
+  background-color: var(--color-accent);
+  color: black !important;
+  border-radius: 8px;
+  padding: 6px 12px;
 }

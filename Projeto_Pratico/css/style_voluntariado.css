@@ -1,4 +1,33 @@
-* {
+/* ==================================================
+   ESTILO — AÇÕES / EVENTOS — INSTITUTO HUMAN
+   --------------------------------------------------
+   Autor: Lucas A.Lusni
+   Projeto: Instituto Human
+   Descrição: Estilização para página de ações, eventos e galeria
+   Boas práticas: responsividade, reutilização e acessibilidade
+   Última atualização: 18/06/2025
+   ================================================== */
+   :root {
+  /* Paleta de cores */
+  --color-primary: #FF4500;          /* Laranja principal */
+  --color-primary-dark: #e03e00;     /* Laranja escuro (hover) */
+  --color-accent: #CCFF00;           /* Amarelo‑limão / Destaque */
+  --color-background: #f5f5f5;       /* Cinza claro de fundo geral */
+  --color-light: #ffffff;            /* Branco */
+  --color-dark: #333333;             /* Texto padrão */
+  --color-footer: #ff5c00;           /* Laranja do rodapé */
+  --color-link: #004080;             /* Azul do botão formulário */
+  --color-link-hover: #0066cc;       /* Azul hover */
+
+  /* Sombras */
+  --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  /* Tipografia */
+  --font-base: Arial, sans-serif;
+  --line-height-base: 1.6;
+}* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,6 +43,7 @@ body {
   background: #f9f9f9;
   color: #333;
 }
+/* ------------------ Navegação ------------------ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,14 +71,14 @@ body {
   padding: 0.4rem 0.9rem;
   border-radius: 8px;
 }
-
+/* ------------------ Banner Principal ------------------ */
 .banner img {
   width: 100%;
   max-height: 420px;
   object-fit: cover;
   display: block;
 }
-
+/* ------------------ Bloco de Descrição ------------------ */
 .descricao {
   padding: 2rem;
   background: white;
@@ -78,7 +108,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
+/* ------------------ Cards de Ações ------------------ */
 .acoes {
   display: flex;
   flex-wrap: wrap;
@@ -121,6 +151,7 @@ body {
   text-decoration: none;
 }
 
+/* ------------------ Seção Agenda ------------------ */
 .agenda {
   background: #fcebe0;
   padding: 2rem 1rem;
@@ -191,7 +222,7 @@ footer {
   width: 24px;
   margin: 0 0.3rem;
 }
-
+/* ------------------ Responsividade ------------------ */
 @media (max-width: 768px) {
   .acoes {
     flex-direction: column;
@@ -217,61 +248,10 @@ footer {
     text-align: center;
   }
 }
-
-/* Popup modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  position: relative;
-}
-
-.modal-content h3 {
-  margin-top: 0;
-}
-
-.modal-content label {
-  display: block;
-  margin-top: 1rem;
-}
-
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.modal-content button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #FF4500;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.close-modal {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
+/* ------------------ Destaque de Link Ativo ------------------ */
+.active-link {
+  background-color: var(--color-accent);
+  color: black !important;
+  border-radius: 8px;
+  padding: 6px 12px;
 }

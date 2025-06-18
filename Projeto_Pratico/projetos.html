@@ -11,21 +11,24 @@
   <header>
     <nav class="navbar" aria-label="Menu principal">
       <div class="logo">
-        <a href="index.html">
-          <strong style="color:white; font-size: 1.2rem;">INSTITUTO <span style="font-weight: 900;">HUMAN</span></strong>
+        <a href="index.html" data-page="index">
+          <strong style="color:white; font-size: 1.2rem;">
+            INSTITUTO <span style="font-weight: 900;">HUMAN</span>
+          </strong>
         </a>
       </div>
       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="voluntariado.html">Voluntariado</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="projetos.html" data-page="projetos">Projetos</a></li>
+        <li><a href="voluntariado.html" data-page="voluntariado">Voluntariado</a></li>
+        <li><a href="index.html#noticias" data-page="noticias">Notícias</a></li>
+        <li><a href="contato.html" data-page="contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <!-- PROJETO 1 -->
-    <section class="projeto" aria-labelledby="projeto-human">
+    <section class="projeto" id= "projeto1"  aria-labelledby="projeto-human">
       <img src="imagens/Banner Human Sem Fronteiras.png" alt="Banner Human Sem Fronteiras" class="banner-full">
       <section class="descricao">
         <h2 id="projeto-human">Sobre o projeto</h2>
@@ -83,8 +86,8 @@
     </section>
 
     <!-- PROJETO 2 -->
-    <section class="projeto" aria-labelledby="projeto-festpra">
-      <img src="imagens/bannerFestPraRua.png" alt="Banner FestPraRua" class="banner-full">
+    <section class="projeto" id= "projeto2"  aria-labelledby="projeto-festpra">
+      <img src="imagens/bannerFestParaRua.png" alt="Banner FestPraRua" class="banner-full">
       <section class="descricao">
         <h2 id="projeto-festpra">Sobre o projeto</h2>
         <p>O <strong>FestPraRua</strong> é um festival gratuito que promove cultura, cidadania e inclusão em espaços públicos da cidade, valorizando populações vulneráveis.</p>
@@ -117,15 +120,15 @@
     </section>
 
     <!-- PROJETO 3 -->
-    <section class="projeto" aria-labelledby="projeto-manas">
+    <section class="projeto" id= "projeto3" aria-labelledby="projeto-manas">
       <img src="imagens/BannerManaseManos.png" alt="Banner Brilho das Manas e Manos" class="banner-full">
       <section class="descricao">
         <h2 id="projeto-manas">Sobre o projeto</h2>
         <p>O <strong>Brilho das Manas e Manos</strong> é voltado para o acolhimento, empoderamento e fortalecimento de pessoas trans e travestis em situação de vulnerabilidade.</p>
         <div class="botoes-acao">
-          <a href="#" class="btn-voluntario">Seja voluntário</a>
-          <a href="#" class="btn-laranja">Doe agora</a>
-          <a href="#" class="btn-secundario">Participar das ações</a>
+          <a href="contato.html" class="btn-voluntario">Seja voluntário</a>
+          <a href="contato.html" class="btn-laranja">Doe agora</a>
+          <a href="contato.html" class="btn-secundario">Participar das ações</a>
         </div>
       </section>
       <section class="texto-imagem">
@@ -153,5 +156,16 @@
     </div>
     <p class="copyright">Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.</p>
   </footer>
+  <script>
+    const pageFile = window.location.pathname.split("/").pop() || "index.html";
+    const pageName = pageFile.split(".")[0];
+    const navLinks = document.querySelectorAll("a[data-page]");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("data-page") === pageName) {
+        link.classList.add("active-link");
+      }
+    });
+  </script>
 </body>
 </html>
