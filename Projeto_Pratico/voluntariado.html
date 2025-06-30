@@ -19,7 +19,9 @@
           </strong>
         </a>
       </div>
-      <ul>
+          <!-- BOTÃO HAMBÚRGUER -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
         <li><a href="voluntariado.html" data-page="voluntariado">Voluntariado</a></li>
         <li><a href="projetos.html" data-page="projetos">Projetos</a></li>
         <li><a href="index.html#noticias" data-page="noticias">Notícias</a></li>
@@ -98,16 +100,6 @@
     </div>
     <p class="copyright">Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.</p>
   </footer>
-    <script>
-    const pageFile = window.location.pathname.split("/").pop() || "index.html";
-    const pageName = pageFile.split(".")[0];
-    const navLinks = document.querySelectorAll("a[data-page]");
-
-    navLinks.forEach(link => {
-      if (link.getAttribute("data-page") === pageName) {
-        link.classList.add("active-link");
-      }
-    });
-  </script>
+<script src="css/js/script.js"></script>
 </body>
 </html>

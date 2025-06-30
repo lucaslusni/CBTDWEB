@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato - Instituto Human</title>
-  <link rel="stylesheet" href="css/style_index.css" />
   <link rel="stylesheet" href="css/style_contato.css" />
 </head>
 <body>
@@ -13,21 +12,26 @@
 <header>
   <nav class="navbar" aria-label="Menu principal">
     <div class="logo">
-      <a href="index.html">
+      <a href="contato.html">
         <strong style="color:white; font-size: 1.2rem;">
           INSTITUTO <span style="font-weight: 900;">HUMAN</span>
         </strong>
       </a>
     </div>
-    <ul>
+    <!-- BOTÃO HAMBÚRGUER -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- LISTA DE LINKS COM CLASSE CORRETA -->
+    <ul class="nav-links">
       <li><a href="contato.html" data-page="contato" class="doe-agora">Contato</a></li>
       <li><a href="projetos.html" data-page="projetos">Projetos</a></li>
       <li><a href="voluntariado.html" data-page="voluntariado">Voluntariado</a></li>
-      <li><a href="index.html#noticias" data-page="noticias">Notícias</a></li>
+      <li><a href="index.html" data-page="index">Sobre Nós</a></li>
+
+
     </ul>
   </nav>
 </header>
-
   <!-- Seção de Contato -->
   <main>
     <section class="contato-section" aria-labelledby="titulo-contato">
@@ -79,16 +83,6 @@
       Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.
     </p>
   </footer>
-<script>
-  const pageFile = window.location.pathname.split("/").pop() || "index.html";
-  const pageName = pageFile.split(".")[0];
-  const navLinks = document.querySelectorAll("a[data-page]");
-
-  navLinks.forEach(link => {
-    if (link.getAttribute("data-page") === pageName) {
-      link.classList.add("active-link");
-    }
-  });
-</script>
+<script src="css/js/script.js"></script>
 </body>
 </html>

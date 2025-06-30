@@ -1,5 +1,5 @@
 /* ==================================================
-   ESTILO — AÇÕES / EVENTOS — INSTITUTO HUMAN
+X
    --------------------------------------------------
    Autor: Lucas A.Lusni
    Projeto: Instituto Human
@@ -36,14 +36,27 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  font-family: var(--font-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-background);
+  color: var(--color-dark);
+  padding-top: 80px; /* espaço para header fixo */
 }
-/* ------------------ Navegação ------------------ */
+
+/* -------------------------------------------------- */
+/* HEADER / MENU DE NAVEGAÇÃO                         */
+/* -------------------------------------------------- */
+header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: var(--shadow-small);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -53,11 +66,12 @@ body {
   color: white;
 }
 
-.navbar ul {
+.nav-links {
   display: flex;
   list-style: none;
   gap: 1.2rem;
 }
+
 
 .navbar a {
   color: white;
@@ -247,6 +261,51 @@ footer {
   .contato {
     text-align: center;
   }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* deixa tudo à esquerda */
+    padding: 0.8rem 1.2rem;
+    background-color: var(--color-primary);
+    flex-wrap: wrap;
+  }
+
+  .navbar .logo {
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ffffff33;
+    text-align: left;
+  }
+
+  .nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 /* ------------------ Destaque de Link Ativo ------------------ */
 .active-link {

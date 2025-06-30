@@ -23,22 +23,11 @@
   --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.2);
   --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.08);
 
   /* Tipografia */
   --font-base: Arial, sans-serif;
   --line-height-base: 1.6;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: #ff7b3e;
-    --color-primary-dark: #b34200;
-    --color-secondary: #3b2c22;
-    --color-background: #1e1e1e;
-    --color-light: #2c2c2c;
-    --color-text: #e0e0e0;
-    --color-highlight: #ffa76b;
-    --color-box: #3a2d26;
-  }
 }
 
 * {
@@ -58,6 +47,19 @@ body {
   color: var(--color-dark);
   padding-top: 80px; /* espaço para header fixo */
 }
+
+/* -------------------------------------------------- */
+/* HEADER / MENU DE NAVEGAÇÃO                         */
+/* -------------------------------------------------- */
+header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: var(--shadow-small);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -67,11 +69,12 @@ body {
   color: white;
 }
 
-.navbar ul {
+.nav-links {
   display: flex;
   list-style: none;
   gap: 1.2rem;
 }
+
 
 .navbar a {
   color: white;
@@ -84,7 +87,6 @@ body {
   color: black;
   padding: 0.4rem 0.9rem;
   border-radius: 8px;
-  
 }
 
 .banner-full {
@@ -329,6 +331,52 @@ footer {
   }
   .texto-imagem .texto {
     padding: 1.5rem;
+  }
+    .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* deixa tudo à esquerda */
+    padding: 0.8rem 1.2rem;
+    background-color: var(--color-primary);
+    flex-wrap: wrap;
+  }
+
+  .navbar .logo {
+    width: 100%;
+    text-align: center; /* alinha o título à esquerda */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ffffff33;
+    text-align: left;
+  }
+
+  .nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
   }
 }
 .active-link {

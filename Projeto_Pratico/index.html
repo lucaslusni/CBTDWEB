@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto Human</title>
   <link rel="stylesheet" href="css/style_index.css" />
 </head>
+
 <body>
   <!-- Menu de Navegação -->
   <header>
     <nav class="navbar" aria-label="Menu principal">
       <div class="logo">
-        <a href="index.html" 
+        <a href="index.html">
           <strong style="color:white; font-size: 1.2rem;">
             INSTITUTO <span style="font-weight: 900;">HUMAN</span>
           </strong>
         </a>
       </div>
-      <ul>
+      <!-- BOTÃO HAMBÚRGUER -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <!-- LISTA DE LINKS COM CLASSE CORRETA -->
+      <ul class="nav-links">
         <li><a href="index.html" data-page="index">Sobre Nós</a></li>
         <li><a href="projetos.html" data-page="projetos">Projetos</a></li>
         <li><a href="voluntariado.html" data-page="voluntariado">Voluntariado</a></li>
-        <li><a href="#noticias" data-page="noticias">Notícias</a></li>
+        <li><a href="index.html#noticias" data-page="noticias">Notícias</a></li>
         <li><a href="contato.html" data-page="contato" class="doe-agora">Contato</a></li>
       </ul>
     </nav>
@@ -53,8 +59,12 @@
     <section id="institucional" class="section destaque" aria-labelledby="titulo-institucional">
       <div class="intro">
         <h2 id="titulo-institucional">Instituto Human</h2>
-        <p>Somos um guarda-chuva social que une pessoas, empresas e comunidades para criar soluções transformadoras. <strong>Somos um movimento vivo, um espaço aberto para novas causas e projetos</strong> que compartilham nossos valores.</p>
-        <p>Acreditamos que, juntos, podemos construir oportunidades e gerar mudanças estruturais, sempre pautados nos <strong><em>ODS</em></strong>, através dos projetos <em>Human Day</em>, <em>FestPraRua</em>, <em>Brilho das Manas</em>, <em>Manos</em> e <em>Human Sem Fronteiras</em>.</p>
+        <p>Somos um guarda-chuva social que une pessoas, empresas e comunidades para criar soluções transformadoras.
+          <strong>Somos um movimento vivo, um espaço aberto para novas causas e projetos</strong> que compartilham
+          nossos valores.</p>
+        <p>Acreditamos que, juntos, podemos construir oportunidades e gerar mudanças estruturais, sempre pautados nos
+          <strong><em>ODS</em></strong>, através dos projetos <em>Human Day</em>, <em>FestPraRua</em>, <em>Brilho das
+            Manas</em>, <em>Manos</em> e <em>Human Sem Fronteiras</em>.</p>
         <div class="botoes">
           <a href="#institucional" class="btn-laranja">Conexões que</a>
           <a href="#institucional" class="btn-laranja">Mudam</a>
@@ -130,8 +140,9 @@
           <img src="imagens/imgDoaçãodeRoupas.png" alt="Imagem da Notícia 1" />
           <div class="noticia-conteudo">
             <h2>Mutirão do Human Day atende 500 pessoas em São Paulo</h2>
-            <p>Ação contou com serviços de saúde, alimentação e acolhimento. Mais de 100 voluntários participaram da ação.</p>
-            <a href="#">Leia mais</a>
+            <p>Ação contou com serviços de saúde, alimentação e acolhimento. Mais de 100 voluntários participaram da
+              ação.</p>
+            <a href="projetos.html">Leia mais</a>
           </div>
         </div>
         <div class="card-noticia">
@@ -139,7 +150,7 @@
           <div class="noticia-conteudo">
             <h2>FestPraRua reúne artistas de rua e promove inclusão cultural</h2>
             <p>Evento gratuito aconteceu no centro de São Paulo com apresentações musicais e rodas de conversa.</p>
-            <a href="#">Leia mais</a>
+            <a href="projetos.html">Leia mais</a>
           </div>
         </div>
         <div class="card-noticia">
@@ -147,11 +158,22 @@
           <div class="noticia-conteudo">
             <h2>Instituto lança programa de capacitação para voluntários</h2>
             <p>Curso online gratuito prepara cidadãos para ações sociais com foco em empatia e dignidade.</p>
-            <a href="#">Leia mais</a>
+            <a href="projetos.html">Leia mais</a>
           </div>
         </div>
       </div>
     </section>
+    <section class="mapa-localizacao" aria-labelledby="titulo-localizacao">
+      <h2 id="titulo-localizacao">Localização do Instituto Human</h2>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.905513903529!2d-46.414923724658614!3d-23.928399678549386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1bb29bde4aeb%3A0x8b65b60dcd73ad02!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20de%20S%C3%A3o%20Paulo%2C%20Campus%20Cubat%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1751313135847!5m2!1spt-BR!2sbr"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        ></iframe>
+      </div>
+    </section>
+
   </main>
 
   <!-- Rodapé -->
@@ -160,7 +182,8 @@
     <div class="footer-contato">
       <p><a href="mailto:contato@institutohuman.org">contato@institutohuman.org</a></p>
       <div class="social-icons">
-         <a href="https://www.instagram.com/institutohuman_org/"><img src="imagens/InstragemIcon.png" alt="Instagram"></a>
+        <a href="https://www.instagram.com/institutohuman_org/"><img src="imagens/InstragemIcon.png"
+            alt="Instagram"></a>
         <a href="https://www.youtube.com/@Institutohuman"><img src="imagens/YoutubeIcon.png" alt="YouTube"></a>
         <a href="https://www.facebook.com/?locale=pt_BR"><img src="imagens/FacebookIcon.png" alt="Facebook"></a>
         <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="imagens/WhatsappIcon.png" alt="WhatsApp"></a>
@@ -168,16 +191,7 @@
     </div>
     <p class="copyright">Copyright © 2025 - Lucas Aquino Lusni de Souza - Todos os Direitos Reservados.</p>
   </footer>
-    <script>
-    const pageFile = window.location.pathname.split("/").pop() || "index.html";
-    const pageName = pageFile.split(".")[0];
-    const navLinks = document.querySelectorAll("a[data-page]");
-
-    navLinks.forEach(link => {
-      if (link.getAttribute("data-page") === pageName) {
-        link.classList.add("active-link");
-      }
-    });
-  </script>
+  <script src="css/js/script.js"></script>
 </body>
+
 </html>

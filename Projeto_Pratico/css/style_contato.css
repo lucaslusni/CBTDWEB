@@ -1,25 +1,25 @@
-/* ================================================== */
-/* ESTILOS GERAIS — PÁGINA DE CONTATO INSTITUTO HUMAN */
-/* -------------------------------------------------- */
-/* Autor: lUCAS A.LUSNI                                 */
-/* Versão: 1.0                                       */
-/* Data: 18/06/2025                                  */
-
+/* ==================================================
+   ESTILOS GERAIS — PÁGINA DE CONTATO INSTITUTO HUMAN
+   --------------------------------------------------
+   Autor: lUCAS A.LUSNI
+   Versão: 1.0
+   Data: 18/06/2025
+   ================================================== */
 
 /* =============================== */
 /* RESET E CONFIGURAÇÕES GERAIS   */
 /* =============================== */
 :root {
   /* Paleta de cores */
-  --color-primary: #FF4500;          /* Laranja principal */
-  --color-primary-dark: #e03e00;     /* Laranja escuro (hover) */
-  --color-accent: #CCFF00;           /* Amarelo‑limão / Destaque */
-  --color-background: #f5f5f5;       /* Cinza claro de fundo geral */
-  --color-light: #ffffff;            /* Branco */
-  --color-dark: #333333;             /* Texto padrão */
-  --color-footer: #ff5c00;           /* Laranja do rodapé */
-  --color-link: #004080;             /* Azul do botão formulário */
-  --color-link-hover: #0066cc;       /* Azul hover */
+  --color-primary: #FF4500;
+  --color-primary-dark: #e03e00;
+  --color-accent: #CCFF00;
+  --color-background: #f5f5f5;
+  --color-light: #ffffff;
+  --color-dark: #333333;
+  --color-footer: #ff5c00;
+  --color-link: #004080;
+  --color-link-hover: #0066cc;
 
   /* Sombras */
   --shadow-small: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -41,75 +41,52 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  padding-top: 80px; /* compensação do header fixo */
+  font-family: var(--font-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-background);
+  color: var(--color-dark);
+  padding-top: 80px; /* espaço para header fixo */
 }
 
-/* =============================== */
-/* CABEÇALHO PADRÃO INSTITUTO HUMAN */
-/* =============================== */
+/* -------------------------------------------------- */
+/* HEADER / MENU DE NAVEGAÇÃO                         */
+/* -------------------------------------------------- */
 header {
-  background-color: #FF4500;
+  background-color: var(--color-primary);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-small);
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: #FF4500;
   color: white;
-  text-decoration: none;
 }
 
-.navbar ul {
-  list-style: none;
+.nav-links {
   display: flex;
-  gap: 25px;
+  list-style: none;
+  gap: 1.2rem;
 }
 
-.navbar ul li a {
+
+.navbar a {
   color: white;
-  text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  transition: color 0.3s;
 }
 
-.navbar ul li a:hover {
-  color: #CCFF00;
-}
-
-.navbar .doe-agora {
-  background-color: #CCFF00;
+.navbar .btn-doe {
+  background: #CCFF00;
   color: black;
-  padding: 8px 18px;
+  padding: 0.4rem 0.9rem;
   border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.navbar .doe-agora:hover {
-  background-color: #b0e700;
 }
 
 /* =============================== */
@@ -223,8 +200,58 @@ footer {
 }
 
 .active-link {
-      background-color: var(--color-accent);
-      color: black !important;
-      border-radius: 8px;
-      padding: 6px 12px;
+  background-color: var(--color-accent);
+  color: black !important;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+/* NAVBAR MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    height: min-content;
+    flex-direction: column;
+    align-items: flex-start; /* deixa tudo à esquerda */
+    padding: 0.8rem 1.2rem;
+    background-color: var(--color-primary);
+    flex-wrap: wrap;
+  }
+
+  .navbar .logo {
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ffffff33;
+    text-align: left;
+  }
+
+  .nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }
